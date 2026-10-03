@@ -35,7 +35,14 @@ const experiences = [
 const skillGroups = [
   {
     title: "Programming",
-    skills: ["C#", "PHP", "JavaScript", "TypeScript", "SQL"],
+    skills: [
+  "C#",
+  "PHP",
+  "Python",
+  "JavaScript",
+  "TypeScript",
+  "SQL",
+],
   },
   {
     title: "Frontend",

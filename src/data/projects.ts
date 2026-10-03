@@ -1,4 +1,3 @@
-
 import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
@@ -24,26 +23,20 @@ export const projects: Project[] = [
     category: "Bakery & Production Management",
     description:
       "A business management platform supporting bakery operations and production workflows. The system focuses on organizing operational information, inventory, suppliers, and production-related processes through a centralized application.",
-    technologies: [
-      "PHP",
-      "MySQL",
-      "JavaScript",
-      "HTML",
-      "CSS",
-    ],
+    technologies: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
   },
   {
     id: "timegate",
     title: "TimeGate",
     category: "Workforce & Attendance Management",
     description:
-      "An employee attendance and workforce management system supporting shift records and operational reporting. My experience includes database troubleshooting, investigating missing records, maintaining data integrity, and working with server-hosted business systems.",
+      "An attendance and workforce management platform integrating physical attendance devices with customer dashboards. Used Python scripts running on a VPS to collect attendance records from devices and transfer them to a database, making the information available through each customer's dashboard. Also worked with employee shifts, reporting, data integrity, and database troubleshooting.",
     technologies: [
-      "SQL",
-      "Database Management",
-      "Data Integrity",
+      "Python",
       "VPS",
-      "Server Administration",
+      "SQL",
+      "Device Integration",
+      "Database Management",
     ],
   },
   {

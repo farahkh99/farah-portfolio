@@ -1,4 +1,5 @@
 import type { Project } from "@/types/project";
+import TechnologyBadge from "./TechnologyBadge";
 
 interface ProjectCardProps {
   project: Project;
@@ -20,6 +21,14 @@ export default function ProjectCard({
       <p className="mt-5 leading-7 text-slate-400">
         {project.description}
       </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+        {project.technologies.map((technology) => (
+            <TechnologyBadge
+            key={technology}
+            name={technology}
+            />
+        ))}
+        </div>
     </article>
   );
 }
