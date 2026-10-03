@@ -34,6 +34,16 @@ export const projects: Project[] = [
       "CSS",
       "RBAC",
     ],
+    caseStudy: {
+      problem:
+        "Retail businesses need dependable sales processing, payment-terminal integration, receipt printing, and transaction reporting across cashier stations.",
+
+      implementation:
+        "Worked on C#/.NET POS functionality and PHP-based services, including payment workflows, PAX terminal integration, receipt and kitchen printing, refunds, cancellations, database optimization, and X/Z reporting.",
+
+      result:
+        "The platform supports retail transactions, card payments, refunds, receipt generation, transaction history, and operational reporting.",
+    },
   },
   {
     id: "timegate",
