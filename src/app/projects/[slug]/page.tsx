@@ -42,6 +42,43 @@ export default async function ProjectPage({
         <p className="mt-8 text-lg leading-8 text-slate-400">
           {project.description}
         </p>
+        {project.caseStudy && (
+  <section className="mt-16 border-t border-white/10 pt-10">
+    <h2 className="text-3xl font-bold">
+      Engineering Case Study
+    </h2>
+
+    <div className="mt-8 grid gap-6 md:grid-cols-3">
+      {[
+        {
+          title: "The Problem",
+          content: project.caseStudy.problem,
+        },
+        {
+          title: "My Implementation",
+          content: project.caseStudy.implementation,
+        },
+        {
+          title: "The Result",
+          content: project.caseStudy.result,
+        },
+      ].map((section) => (
+        <article
+          key={section.title}
+          className="rounded-2xl border border-white/10 bg-white/5 p-6"
+        >
+          <h3 className="text-lg font-semibold text-teal-400">
+            {section.title}
+          </h3>
+
+          <p className="mt-4 leading-7 text-slate-400">
+            {section.content}
+          </p>
+        </article>
+      ))}
+    </div>
+  </section>
+)}
       </div>
     </main>
   );

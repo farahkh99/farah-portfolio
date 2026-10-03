@@ -33,16 +33,16 @@ const experiences = [
 
 
 const skillGroups = [
-  {
-    title: "Programming",
-    skills: [
-  "C#",
-  "PHP",
-  "Python",
-  "JavaScript",
-  "TypeScript",
-  "SQL",
-],
+{
+  title: "Programming",
+  skills: [
+    "C#",
+    "PHP",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "SQL",
+  ],
   },
   {
     title: "Frontend",
@@ -255,7 +255,7 @@ export default function Home() {
           </p>
 
 
-         <div className="mt-12 grid gap-6 md:grid-cols-2">
+         <div className="mt-12 grid gap-6 md:grid-cols-2 md:auto-rows-fr">
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}

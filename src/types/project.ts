@@ -4,4 +4,9 @@ export interface Project {
   category: string;
   description: string;
   technologies: string[];
+  caseStudy?: {
+  problem: string;
+  implementation: string;
+  result: string;
+};
 }

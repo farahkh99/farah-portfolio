@@ -6,15 +6,16 @@ export const projects: Project[] = [
     title: "CTC Cashier",
     category: "Point-of-Sale & Retail Management",
     description:
-      "A retail point-of-sale system combining a C# desktop application with PHP backend services. My work includes transaction processing, payment workflows, receipt printing, reporting, database optimization, and integration with external services such as WhatsApp for digital document delivery.",
+      "A point-of-sale platform combining a C#/.NET desktop application with PHP backend services. My work includes transaction and payment processing, integration with card payment terminals, receipt printers, reporting, database optimization, and WhatsApp-based digital document delivery.",
     technologies: [
       "C#",
       ".NET",
       "PHP",
       "MySQL",
       "REST APIs",
+      "Payment Terminals",
+      "Receipt Printers",
       "WhatsApp API",
-      "Hardware Integration",
     ],
   },
   {
@@ -30,14 +31,25 @@ export const projects: Project[] = [
     title: "TimeGate",
     category: "Workforce & Attendance Management",
     description:
-      "An attendance and workforce management platform integrating physical attendance devices with customer dashboards. Used Python scripts running on a VPS to collect attendance records from devices and transfer them to a database, making the information available through each customer's dashboard. Also worked with employee shifts, reporting, data integrity, and database troubleshooting.",
+      "A workforce and attendance management platform connecting physical attendance devices to customer dashboards. I worked with Python scripts running on a VPS to collect attendance records and transfer them to a database, alongside PHP-based web functionality, employee shifts, reporting, and database troubleshooting.",
     technologies: [
       "Python",
-      "VPS",
+      "PHP",
       "SQL",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "VPS",
       "Device Integration",
-      "Database Management",
     ],
+    caseStudy: {
+      problem:
+        "Attendance records from physical devices needed to be collected and made accessible through customer dashboards.",
+      implementation:
+        "Used Python scripts running on a VPS to retrieve attendance records from devices and transfer them into the database serving customer dashboards.",
+      result:
+        "Attendance information became available through each customer's dashboard for review and workforce management.",
+    },
   },
   {
     id: "ctc-invoice",
