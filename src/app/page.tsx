@@ -1,5 +1,8 @@
 import AnimatedBackground from "@/components/AnimatedBackground";
 import SiteHeader from "@/components/layout/SiteHeader";
+import { projects } from "@/data/projects";
+import ProjectCard from "@/components/projects/ProjectCard";
+
 const experiences = [
   {
     role: "Full-Stack Software Engineer / Technical Lead",
@@ -27,40 +30,7 @@ const experiences = [
   },
 ];
 
-const workHighlights = [
-  {
-    number: "01",
-    title: "Retail & Transaction Systems",
-    category: "PROFESSIONAL EXPERIENCE",
-    description:
-      "Contributed to business transaction workflows, reporting, receipt processing, and integrations between desktop applications, backend services, and hardware.",
-    technologies: ["C#", "PHP", "MySQL", "REST APIs"],
-  },
-  {
-    number: "02",
-    title: "Business Management Platforms",
-    category: "PROFESSIONAL EXPERIENCE",
-    description:
-      "Developed functionality for inventory, workforce, customer management, and digital-document workflows with relational data models and access controls.",
-    technologies: ["PHP", "JavaScript", "SQL", "RBAC"],
-  },
-  {
-    number: "03",
-    title: "Multilingual Web Applications",
-    category: "PROFESSIONAL EXPERIENCE",
-    description:
-      "Built responsive business interfaces supporting Arabic, Hebrew, and English, including right-to-left and left-to-right layouts.",
-    technologies: ["HTML", "CSS", "JavaScript", "RTL/LTR"],
-  },
-  {
-    number: "04",
-    title: "JobFlow",
-    category: "PERSONAL PROJECT · IN DEVELOPMENT",
-    description:
-      "A personal full-stack recruitment application for exploring modern React architecture, job management, APIs, and database integration.",
-    technologies: ["Next.js", "TypeScript", "MongoDB"],
-  },
-];
+
 
 const skillGroups = [
   {
@@ -277,44 +247,16 @@ export default function Home() {
             proprietary source code or internal materials.
           </p>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {workHighlights.map((project) => (
-              <article
-                key={project.number}
-                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition duration-300 hover:-translate-y-1 hover:border-teal-400/40"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-sm text-slate-500">
-                    / {project.number}
-                  </span>
-                  <span className="text-teal-400">↗</span>
-                </div>
 
-                <p className="mt-10 text-xs font-semibold tracking-widest text-teal-400">
-                  {project.category}
-                </p>
-
-                <h3 className="mt-3 text-2xl font-semibold">
-                  {project.title}
-                </h3>
-
-                <p className="mt-5 leading-7 text-slate-400">
-                  {project.description}
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-2">
-                  {project.technologies.map((technology) => (
-                    <span
-                      key={technology}
-                      className="rounded-lg border border-white/10 bg-slate-900 px-3 py-1.5 text-xs text-slate-300"
-                    >
-                      {technology}
-                    </span>
-                  ))}
-                </div>
-              </article>
+         <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+              />
             ))}
           </div>
+
         </section>
 
         {/* Skills */}

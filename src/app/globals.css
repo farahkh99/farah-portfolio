@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes float-glow {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(80px, 60px, 0);
+  }
+}
+
+.ambient-orb {
+  animation: float-glow 12s ease-in-out infinite alternate;
+}
+
+.ambient-orb-slow {
+  animation-duration: 18s;
+  animation-direction: alternate-reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb {
+    animation: none;
+  }
+}
