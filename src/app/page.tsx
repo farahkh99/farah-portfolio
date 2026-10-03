@@ -126,7 +126,7 @@ export default function Home() {
           id="home"
           className="flex min-h-[650px] scroll-mt-24 flex-col justify-center py-24"
         >
-       
+
 
           <h1 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl">
             Hi, I&apos;m{" "}
@@ -154,7 +154,7 @@ export default function Home() {
               Explore My Work
             </a>
 
-       
+
           </div>
 
           <div className="mt-20 grid max-w-xl grid-cols-3 gap-5 border-t border-white/10 pt-8">
@@ -409,7 +409,7 @@ export default function Home() {
             collaborate with talented teams, and continue growing.
           </p>
 
-         
+
         </section>
       </main>
 

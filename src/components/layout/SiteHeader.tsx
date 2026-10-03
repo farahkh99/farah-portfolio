@@ -3,7 +3,6 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function SiteHeader() {
   return (
-    <header>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-lg">
         <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
           <a href="#home" className="text-2xl font-bold tracking-tight">
@@ -57,6 +56,5 @@ export default function SiteHeader() {
           </div>
         </nav>
       </header>
-    </header>
   );
 }
