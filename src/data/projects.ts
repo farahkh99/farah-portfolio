@@ -1,3 +1,4 @@
+
 import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
@@ -6,12 +7,13 @@ export const projects: Project[] = [
     title: "CTC Cashier",
     category: "Point-of-Sale & Retail Management",
     description:
-      "A point-of-sale platform combining a C#/.NET desktop application with PHP backend services. My work includes transaction and payment processing, integration with card payment terminals, receipt printers, reporting, database optimization, and WhatsApp-based digital document delivery.",
+      "A production point-of-sale platform combining a C#/.NET WinForms desktop application with PHP-based services and management functionality. My work includes sales and payment workflows, split payments, refunds, cancellations, PAX payment-terminal integration, receipt and kitchen printing, inventory, X/Z reporting, database optimization, and WhatsApp-based document delivery.",
     technologies: [
       "C#",
       ".NET",
       "PHP",
       "MySQL",
+      "Bootstrap",
       "REST APIs",
       "Payment Terminals",
       "Receipt Printers",
@@ -23,32 +25,41 @@ export const projects: Project[] = [
     title: "Dibsy",
     category: "Bakery & Production Management",
     description:
-      "A business management platform supporting bakery operations and production workflows. The system focuses on organizing operational information, inventory, suppliers, and production-related processes through a centralized application.",
-    technologies: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+      "A bakery production and business-management platform developed with PHP, JavaScript, and MySQL. My work includes managing ingredients, recipes, suppliers, products, warehouses, inventory, returns, production tracking, and cost calculations, alongside responsive interfaces, access controls, operational reporting, and production workflows.",
+    technologies: [
+      "PHP",
+      "MySQL",
+      "JavaScript",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "RBAC",
+    ],
   },
   {
     id: "timegate",
     title: "TimeGate",
     category: "Workforce & Attendance Management",
     description:
-      "A workforce and attendance management platform connecting physical attendance devices to customer dashboards. I worked with Python scripts running on a VPS to collect attendance records and transfer them to a database, alongside PHP-based web functionality, employee shifts, reporting, and database troubleshooting.",
+      "A workforce-management platform combining PHP-based customer dashboards with attendance-device integration. I worked with Python scripts running on a VPS to collect attendance records and transfer them into MySQL, alongside attendance reporting, employee shifts, requests and approvals, biometric-device integration, GPS-related functionality, and database troubleshooting.",
     technologies: [
       "Python",
       "PHP",
-      "SQL",
-      "HTML",
-      "CSS",
+      "JavaScript",
+      "MySQL",
       "Bootstrap",
       "VPS",
       "Device Integration",
+      "GPS",
+      "RBAC",
     ],
     caseStudy: {
       problem:
-        "Attendance records from physical devices needed to be collected and made accessible through customer dashboards.",
+        "Attendance records from physical devices needed to be collected and made available through customer-specific workforce dashboards.",
       implementation:
-        "Used Python scripts running on a VPS to retrieve attendance records from devices and transfer them into the database serving customer dashboards.",
+        "Used Python scripts on a VPS to retrieve attendance records from devices and transfer them into the database used by the PHP-based application.",
       result:
-        "Attendance information became available through each customer's dashboard for review and workforce management.",
+        "Attendance information became accessible through customer dashboards for reviewing employee activity, shifts, and reporting.",
     },
   },
   {
@@ -56,15 +67,17 @@ export const projects: Project[] = [
     title: "CTC Invoice",
     category: "Invoicing & Document Management",
     description:
-      "An invoicing platform under development, designed around multi-tenant business data, document workflows, encrypted information, access controls, and multilingual Hebrew and Arabic interfaces with right-to-left support.",
+      "A multi-tenant invoicing platform under development using PHP, MySQL, and JavaScript. The system focuses on customer and supplier management, accounting-document workflows, document generation, encrypted business information, role-based access controls, and multilingual Hebrew and Arabic interfaces with right-to-left support.",
     technologies: [
       "PHP",
       "MySQL",
       "JavaScript",
+      "Bootstrap",
       "REST APIs",
       "Encryption",
       "RBAC",
       "RTL",
+      "PDF Generation",
     ],
   },
 ];
