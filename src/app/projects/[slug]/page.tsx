@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import ArchitectureFlow from "@/components/projects/ArchitectureFlow";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -48,6 +49,7 @@ export default async function ProjectPage({
       Engineering Case Study
     </h2>
 
+
     <div className="mt-8 grid gap-6 md:grid-cols-3">
       {[
         {
@@ -78,6 +80,10 @@ export default async function ProjectPage({
       ))}
     </div>
   </section>
+
+)}
+  {project.architecture && (
+  <ArchitectureFlow steps={project.architecture} />
 )}
       </div>
     </main>

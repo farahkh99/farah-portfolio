@@ -1,3 +1,14 @@
+export type ArchitectureIcon =
+  | "device"
+  | "server"
+  | "database"
+  | "dashboard";
+
+export interface ArchitectureStep {
+  title: string;
+  description: string;
+  icon: ArchitectureIcon;
+}
 export interface Project {
   id: string;
   title: string;
@@ -9,4 +20,5 @@ export interface Project {
   implementation: string;
   result: string;
 };
+architecture?: ArchitectureStep[];
 }

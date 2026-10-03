@@ -1,4 +1,3 @@
-
 import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
@@ -61,7 +60,33 @@ export const projects: Project[] = [
       result:
         "Attendance information became accessible through customer dashboards for reviewing employee activity, shifts, and reporting.",
     },
+    architecture: [
+      {
+        title: "Biometric Attendance Devices",
+        description: "Employees record attendance through physical devices.",
+        icon: "device",
+      },
+      {
+        title: "Python Scripts on VPS",
+        description:
+          "Python scripts retrieve attendance records and transfer the data.",
+        icon: "server",
+      },
+      {
+        title: "MySQL Database",
+        description:
+          "Attendance records are stored for the workforce application.",
+        icon: "database",
+      },
+      {
+        title: "PHP Customer Dashboard",
+        description:
+          "Customers access their employee attendance information and reports.",
+        icon: "dashboard",
+      },
+    ],
   },
+
   {
     id: "ctc-invoice",
     title: "CTC Invoice",
