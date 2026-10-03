@@ -1,5 +1,4 @@
 import AnimatedBackground from "@/components/AnimatedBackground";
-import SiteHeader from "@/components/layout/SiteHeader";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/projects/ProjectCard";
 
@@ -95,7 +94,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <AnimatedBackground />
       {/* Navigation */}
-      <SiteHeader />
+
 
       <main className="mx-auto max-w-6xl px-6">
         {/* Hero */}

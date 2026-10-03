@@ -3,6 +3,7 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import ArchitectureFlow from "@/components/projects/ArchitectureFlow";
 import TechnologyBadge from "@/components/projects/TechnologyBadge";
+import type { Metadata } from "next";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -16,6 +17,25 @@ export function generateStaticParams() {
   }));
 }
 export const dynamicParams = false;
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const project = projects.find(
+    (item) => item.id === slug
+  );
+
+  if (!project) {
+    notFound();
+  }
+
+  return {
+    title: `${project.title} | Farah Khoury`,
+    description: project.description,
+  };
+}
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
