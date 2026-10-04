@@ -1,6 +1,9 @@
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/projects/ProjectCard";
+import { Mail, MapPin } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
+import TechnologyBadge from "@/components/projects/TechnologyBadge";
 
 const experiences = [
   {
@@ -29,24 +32,74 @@ const experiences = [
   },
 ];
 
+
 const skillGroups = [
   {
-    title: "Programming",
-    skills: ["C#", "PHP", "Python", "JavaScript", "TypeScript", "SQL"],
+    title: "Programming Languages",
+    skills: [
+      "C#",
+      "PHP",
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+    ],
   },
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"],
+    title: "Frontend Development",
+    skills: [
+      "React",
+      "Next.js",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "jQuery",
+      "AJAX",
+      "Responsive UI",
+      "RTL / LTR",
+    ],
   },
   {
-    title: "Backend & Databases",
+    title: "Backend & APIs",
     skills: [
       "Node.js",
+      "Express.js",
+      "PHP OOP / MVC",
       "REST APIs",
+      "Webhooks",
       "Authentication",
+      "RBAC",
+      "Third-party Integrations",
+      "Google Libraries",
+    ],
+  },
+  {
+    title: "Databases & Data",
+    skills: [
       "MySQL",
       "MariaDB",
       "MongoDB",
+      "Database Design",
+      "Migrations",
+      "Query Optimization",
+      "Data Integrity",
+    ],
+  },
+  {
+    title: "Systems & Cloud",
+    skills: [
+      "Linux",
+      "Unix",
+      "Windows",
+      "Microsoft Azure",
+      "Active Directory",
+      "Microsoft 365",
+      "VPS",
+      "Networking",
+      "VPNs",
+      "Firewalls",
     ],
   },
   {
@@ -57,7 +110,13 @@ const skillGroups = [
       "Docker",
       "Visual Studio",
       "VS Code",
+      "C# WinForms",
+      "System Architecture",
+      "Testing",
+      "Code Review",
       "Debugging",
+      "Deployment",
+      "Production Support",
     ],
   },
 ];
@@ -257,14 +316,9 @@ export default function Home() {
               >
                 <h3 className="mb-6 text-lg font-semibold">{group.title}</h3>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap items-start gap-4">
                   {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-lg bg-slate-800 px-3 py-2 text-sm text-slate-300"
-                    >
-                      {skill}
-                    </span>
+                    <TechnologyBadge key={skill} name={skill} />
                   ))}
                 </div>
               </article>
@@ -327,25 +381,36 @@ export default function Home() {
               </p>
 
               {/* Contact actions */}
+
+              {/* Contact actions */}
               <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="mailto:farah.khoury11@gmail.com"
-                  className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-accent px-7 py-3 font-semibold text-background transition-all duration-200 hover:-translate-y-1 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:w-auto"
+                  className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-xl bg-accent px-7 py-3 font-semibold text-background transition-all duration-200 hover:-translate-y-1 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:w-auto"
                 >
-                  Email Me
+                  <Mail
+                    aria-hidden="true"
+                    className="h-5 w-5"
+                    strokeWidth={2}
+                  />
+                  <span>Email Me</span>
                 </a>
 
                 <a
                   href="https://www.linkedin.com/in/farah-khoury-473a3920a"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-accent/40 bg-white/5 px-7 py-3 font-semibold text-foreground transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:w-auto"
+                  className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-xl border border-accent/40 bg-white/5 px-7 py-3 font-semibold text-foreground transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:w-auto"
                 >
-                  Connect on LinkedIn
+                  <FaLinkedin aria-hidden="true" className="h-5 w-5" />
+                  <span>Connect on LinkedIn</span>
                 </a>
               </div>
 
-              <p className="mt-8 text-sm text-muted">Based in Israel</p>
+              <p className="mt-8 flex items-center justify-center gap-2 text-sm text-muted">
+                <MapPin aria-hidden="true" className="h-4 w-4 text-accent" />
+                <span>Based in Israel</span>
+              </p>
             </div>
           </div>
         </section>
