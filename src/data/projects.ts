@@ -114,5 +114,15 @@ export const projects: Project[] = [
       "RTL",
       "PDF Generation",
     ],
+    caseStudy: {
+      problem:
+        "Businesses need a consistent way to manage customers, suppliers, and accounting documents while supporting multilingual workflows and separate business data.",
+
+      implementation:
+        "Developing a multi-tenant invoicing platform using PHP, MySQL, and JavaScript, with role-based permissions, encrypted business information, document workflows, and Hebrew and Arabic RTL interfaces.",
+
+      result:
+        "The platform remains under development, with its document-management, security, and business-management capabilities being implemented and refined.",
+    },
   },
 ];
