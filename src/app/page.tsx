@@ -29,19 +29,10 @@ const experiences = [
   },
 ];
 
-
-
 const skillGroups = [
-{
-  title: "Programming",
-  skills: [
-    "C#",
-    "PHP",
-    "Python",
-    "JavaScript",
-    "TypeScript",
-    "SQL",
-  ],
+  {
+    title: "Programming",
+    skills: ["C#", "PHP", "Python", "JavaScript", "TypeScript", "SQL"],
   },
   {
     title: "Frontend",
@@ -95,18 +86,14 @@ export default function Home() {
       <AnimatedBackground />
       {/* Navigation */}
 
-
       <main className="mx-auto max-w-6xl px-6">
         {/* Hero */}
         <section
           id="home"
           className="flex min-h-[650px] scroll-mt-24 flex-col justify-center py-24"
         >
-
-
           <h1 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl">
-            Hi, I&apos;m{" "}
-            <span className="text-teal-400">Farah Khoury.</span>
+            Hi, I&apos;m <span className="text-teal-400">Farah Khoury.</span>
           </h1>
 
           <p className="mt-4 text-xl font-medium tracking-wide text-slate-200 sm:text-2xl">
@@ -114,12 +101,15 @@ export default function Home() {
           </p>
 
           <p className="mt-8 max-w-3xl text-xl font-medium leading-relaxed text-slate-200">
-            I build reliable software that solves real-world business
-            problems.
+            I build reliable software that solves real-world business problems.
           </p>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-            Full-Stack Software Engineer With 3+ years of professional experience, I develop production business applications, backend services, and complex integrations using C#, PHP, JavaScript, and SQL. I also build full-stack projects with React, Next.js, TypeScript, and Node.js.
+            Full-Stack Software Engineer With 3+ years of professional
+            experience, I develop production business applications, backend
+            services, and complex integrations using C#, PHP, JavaScript, and
+            SQL. I also build full-stack projects with React, Next.js,
+            TypeScript, and Node.js.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -129,8 +119,6 @@ export default function Home() {
             >
               Explore My Work
             </a>
-
-
           </div>
 
           <div className="mt-20 grid max-w-xl grid-cols-3 gap-5 border-t border-white/10 pt-8">
@@ -165,21 +153,21 @@ export default function Home() {
           <div className="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-slate-400">
             <p>
               I&apos;m a software engineer experienced in developing,
-              integrating, and supporting production applications
-              across desktop and web environments.
+              integrating, and supporting production applications across desktop
+              and web environments.
             </p>
 
             <p>
-              My experience includes backend development, relational
-              databases, responsive multilingual interfaces,
-              third-party integrations, and complex business workflows.
+              My experience includes backend development, relational databases,
+              responsive multilingual interfaces, third-party integrations, and
+              complex business workflows.
             </p>
 
             <p>
-              I enjoy designing maintainable solutions, solving
-              technical problems, and mentoring developers.
-              I&apos;m also expanding my experience with TypeScript,
-              React, Next.js, and cloud-native development.
+              I enjoy designing maintainable solutions, solving technical
+              problems, and mentoring developers. I&apos;m also expanding my
+              experience with TypeScript, React, Next.js, and cloud-native
+              development.
             </p>
           </div>
         </section>
@@ -193,9 +181,7 @@ export default function Home() {
             MY CAREER
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold">
-            Professional Experience
-          </h2>
+          <h2 className="mt-4 text-4xl font-bold">Professional Experience</h2>
 
           <div className="mt-12 space-y-6">
             {experiences.map((job) => (
@@ -205,22 +191,16 @@ export default function Home() {
               >
                 <div className="flex flex-col justify-between gap-4 md:flex-row">
                   <div>
-                    <h3 className="text-2xl font-semibold">
-                      {job.role}
-                    </h3>
+                    <h3 className="text-2xl font-semibold">{job.role}</h3>
 
-                    <p className="mt-2 text-teal-400">
-                      {job.company}
-                    </p>
+                    <p className="mt-2 text-teal-400">{job.company}</p>
 
                     <p className="mt-1 text-sm text-slate-500">
                       {job.location}
                     </p>
                   </div>
 
-                  <p className="text-sm text-slate-400">
-                    {job.period}
-                  </p>
+                  <p className="text-sm text-slate-400">{job.period}</p>
                 </div>
 
                 <ul className="mt-7 list-disc space-y-3 pl-5 leading-7 text-slate-400 marker:text-teal-400">
@@ -242,27 +222,20 @@ export default function Home() {
             ENGINEERING WORK
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold">
-            Selected Work
-          </h2>
+          <h2 className="mt-4 text-4xl font-bold">Selected Work</h2>
 
           <p className="mt-5 max-w-2xl leading-7 text-slate-400">
-            A selection of my professional engineering experience
-            and personal development work. Employer-owned projects
-            are described at a high level without publishing
-            proprietary source code or internal materials.
+            A selection of my professional engineering experience and personal
+            development work. Employer-owned projects are described at a high
+            level without publishing proprietary source code or internal
+            materials.
           </p>
 
-
-         <div className="mt-12 grid gap-6 md:grid-cols-2 md:auto-rows-fr">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 md:auto-rows-fr">
             {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-              />
+              <ProjectCard key={project.id} project={project} />
             ))}
           </div>
-
         </section>
 
         {/* Skills */}
@@ -274,9 +247,7 @@ export default function Home() {
             TECHNICAL EXPERTISE
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold">
-            Skills & Technologies
-          </h2>
+          <h2 className="mt-4 text-4xl font-bold">Skills & Technologies</h2>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {skillGroups.map((group) => (
@@ -284,9 +255,7 @@ export default function Home() {
                 key={group.title}
                 className="rounded-2xl border border-white/10 bg-white/[0.03] p-7"
               >
-                <h3 className="mb-6 text-lg font-semibold">
-                  {group.title}
-                </h3>
+                <h3 className="mb-6 text-lg font-semibold">{group.title}</h3>
 
                 <div className="flex flex-wrap gap-2">
                   {group.skills.map((skill) => (
@@ -322,49 +291,69 @@ export default function Home() {
                 key={item.degree}
                 className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
               >
-                <h3 className="text-xl font-semibold">
-                  {item.degree}
-                </h3>
+                <h3 className="text-xl font-semibold">{item.degree}</h3>
 
-                <p className="mt-2 text-teal-400">
-                  {item.institution}
-                </p>
+                <p className="mt-2 text-teal-400">{item.institution}</p>
 
-                <p className="mt-2 text-sm text-slate-400">
-                  {item.detail}
-                </p>
+                <p className="mt-2 text-sm text-slate-400">{item.detail}</p>
               </article>
             ))}
           </div>
         </section>
 
         {/* Contact */}
-        <section
-          id="contact"
-          className="my-20 scroll-mt-24 rounded-3xl border border-teal-400/20 bg-teal-400/[0.05] px-6 py-20 text-center"
-        >
-          <p className="text-sm font-semibold tracking-widest text-teal-400">
-            GET IN TOUCH
-          </p>
 
-          <h2 className="mt-5 text-4xl font-bold">
-            Let&apos;s Build Something Meaningful
-          </h2>
+        <section id="contact" className="scroll-mt-28 py-20 md:py-28">
+          <div className="relative overflow-hidden rounded-3xl border border-accent/20 bg-surface px-6 py-14 text-center md:px-12 md:py-16">
+            {/* Decorative gold glow */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-32 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
+            />
 
-          <p className="mx-auto mt-6 max-w-xl leading-8 text-slate-400">
-            I&apos;m interested in software engineering opportunities
-            where I can contribute to meaningful products,
-            collaborate with talented teams, and continue growing.
-          </p>
+            <div className="relative z-10 mx-auto max-w-2xl">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
+                Get in Touch
+              </p>
 
+              <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
+                Let&apos;s Build Something Meaningful.
+              </h2>
 
+              <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-muted md:text-lg">
+                I&apos;m open to software engineering opportunities where I can
+                build meaningful products, solve challenging problems, and
+                collaborate with talented teams.
+              </p>
+
+              {/* Contact actions */}
+              <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <a
+                  href="mailto:farah.khoury11@gmail.com"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-accent px-7 py-3 font-semibold text-background transition-all duration-200 hover:-translate-y-1 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:w-auto"
+                >
+                  Email Me
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/farah-khoury-473a3920a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-accent/40 bg-white/5 px-7 py-3 font-semibold text-foreground transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:w-auto"
+                >
+                  Connect on LinkedIn
+                </a>
+              </div>
+
+              <p className="mt-8 text-sm text-muted">Based in Israel</p>
+            </div>
+          </div>
         </section>
       </main>
 
       {/* Footer */}
       <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} Farah Khoury.
-        Built with Next.js and TypeScript.
+        © {new Date().getFullYear()} Farah Khoury
       </footer>
     </div>
   );
