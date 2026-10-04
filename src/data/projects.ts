@@ -36,13 +36,13 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       problem:
-        "Retail businesses need dependable sales processing, payment-terminal integration, receipt printing, and transaction reporting across cashier stations.",
+        "Bakery operations involve managing ingredients, recipes, suppliers, warehouses, inventory, production processes, and product costs across connected workflows.",
 
       implementation:
-        "Worked on C#/.NET POS functionality and PHP-based services, including payment workflows, PAX terminal integration, receipt and kitchen printing, refunds, cancellations, database optimization, and X/Z reporting.",
+        "Developed PHP and JavaScript functionality backed by MySQL for ingredient management, recipes, suppliers, warehouse inventory, production tracking, returns, reporting, and cost calculations.",
 
       result:
-        "The platform supports retail transactions, card payments, refunds, receipt generation, transaction history, and operational reporting.",
+        "The platform brings production and inventory processes into a centralized management environment, supporting stock visibility, operational tracking, and product cost calculations.",
     },
   },
   {
