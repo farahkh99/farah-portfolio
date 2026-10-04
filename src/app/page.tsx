@@ -5,33 +5,8 @@ import TechnologyBadge from "@/components/projects/TechnologyBadge";
 import ContactSection from "@/components/home/ContactSection";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
+import ExperienceSection from "@/components/home/ExperienceSection";
 
-const experiences = [
-  {
-    role: "Full-Stack Software Engineer / Technical Lead",
-    company: "CTC",
-    location: "Yarka, Israel",
-    period: "2023 — Present",
-    responsibilities: [
-      "Developed and maintained business applications across POS, CRM, inventory, workforce management, and digital workflows.",
-      "Built backend services, database-driven functionality, REST APIs, authentication, and role-based access control.",
-      "Developed multilingual interfaces supporting Arabic, Hebrew, and English with RTL and LTR layouts.",
-      "Worked on external integrations, performance improvements, and production troubleshooting.",
-      "Mentored seven student developers through implementation, code reviews, testing, and deployment.",
-    ],
-  },
-  {
-    role: "IT Specialist",
-    company: "Galil Software",
-    location: "Nazareth, Israel",
-    period: "2022 — 2024",
-    responsibilities: [
-      "Supported Windows and Linux environments, Microsoft Azure, Active Directory, and Microsoft 365.",
-      "Troubleshot networking, VPN, firewall, printing, remote access, and workstation issues.",
-      "Diagnosed application, database, connectivity, and infrastructure problems affecting business operations.",
-    ],
-  },
-];
 
 
 const skillGroups = [
@@ -153,45 +128,7 @@ export default function Home() {
         <AboutSection />
 
         {/* Experience */}
-        <section
-          id="experience"
-          className="scroll-mt-24 border-t border-white/10 py-24"
-        >
-          <p className="text-sm font-semibold tracking-widest text-teal-400">
-            MY CAREER
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold">Professional Experience</h2>
-
-          <div className="mt-12 space-y-6">
-            {experiences.map((job) => (
-              <article
-                key={job.company}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-7"
-              >
-                <div className="flex flex-col justify-between gap-4 md:flex-row">
-                  <div>
-                    <h3 className="text-2xl font-semibold">{job.role}</h3>
-
-                    <p className="mt-2 text-teal-400">{job.company}</p>
-
-                    <p className="mt-1 text-sm text-slate-500">
-                      {job.location}
-                    </p>
-                  </div>
-
-                  <p className="text-sm text-slate-400">{job.period}</p>
-                </div>
-
-                <ul className="mt-7 list-disc space-y-3 pl-5 leading-7 text-slate-400 marker:text-teal-400">
-                  {job.responsibilities.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
+        <ExperienceSection />
 
         {/* Selected Work */}
         <section
