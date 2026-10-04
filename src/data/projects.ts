@@ -18,6 +18,16 @@ export const projects: Project[] = [
       "Receipt Printers",
       "WhatsApp API",
     ],
+    caseStudy: {
+      problem:
+        "Retail businesses need reliable transaction processing that connects desktop checkout workflows with payments, receipt printing, inventory, and reporting.",
+
+      implementation:
+        "Developed and maintained C#/.NET WinForms and PHP functionality for sales processing, split payments, refunds, cancellations, PAX payment-terminal integration, receipt and kitchen printing, X/Z reporting, and database optimization.",
+
+      result:
+        "The platform brings checkout, payment handling, printing, and operational reporting into connected business workflows, supporting day-to-day retail operations.",
+    },
   },
   {
     id: "dibsy",
