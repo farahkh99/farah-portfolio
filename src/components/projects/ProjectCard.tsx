@@ -9,6 +9,7 @@ import {
   FolderKanban,
   type LucideIcon,
 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -53,6 +54,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.map((technology) => (
             <TechnologyBadge key={technology} name={technology} />
           ))}
+        </div>
+        <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+          <span className="text-sm font-semibold text-accent">
+            View Case Study
+          </span>
+
+          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-accent/30 bg-accent/10 text-accent transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+            <ArrowUpRight aria-hidden="true" className="h-5 w-5" />
+          </span>
         </div>
       </article>
     </Link>
