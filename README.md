@@ -1,36 +1,219 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Farah Khoury — Software Engineer Portfolio
 
-First, run the development server:
+[![Portfolio CI](https://github.com/farahkh99/farah-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/farahkh99/farah-portfolio/actions/workflows/ci.yml)
+
+A responsive personal portfolio showcasing my experience as a Full-Stack Software Engineer, my technical skills, and selected engineering projects.
+
+Built with **Next.js 16, React, TypeScript, and Tailwind CSS**, featuring a custom Black & Gold design system, reusable components, and production deployment.
+
+### [🌐 View Live Portfolio](https://farah-portfolio-ten.vercel.app/)
+
+---
+
+## About Me
+
+I'm Farah Khoury, a Full-Stack Software Engineer with 3+ years of professional experience developing business applications, backend services, databases, and integrations.
+
+My background includes:
+
+- C#/.NET desktop applications
+- PHP and JavaScript web applications
+- REST APIs and third-party integrations
+- MySQL and database-driven systems
+- Authentication and role-based access control
+- Multilingual interfaces with RTL and LTR support
+- Production troubleshooting and technical leadership
+
+I'm continuing to expand my experience with React, Next.js, TypeScript, Node.js, and modern deployment workflows.
+
+## Featured Engineering Projects
+
+### CTC Cashier
+**Point-of-Sale & Retail Management**
+
+A retail platform combining a C#/.NET WinForms application with PHP services.
+
+Engineering work includes transaction processing, split payments, PAX payment-terminal integrations, receipt printing, refunds, inventory workflows, and X/Z reports.
+
+[View Case Study](https://farah-portfolio-ten.vercel.app/projects/ctc-cashier)
+
+### Dibsy
+**Bakery & Production Management**
+
+A PHP and MySQL platform supporting recipes, ingredients, suppliers, warehouses, inventory, production tracking, and cost calculations.
+
+[View Case Study](https://farah-portfolio-ten.vercel.app/projects/dibsy)
+
+### TimeGate
+**Workforce & Attendance Management**
+
+A workforce-management system integrating biometric attendance devices, Python scripts on a VPS, MySQL storage, and PHP customer dashboards.
+
+Includes a high-level system architecture diagram.
+
+[View Case Study](https://farah-portfolio-ten.vercel.app/projects/timegate)
+
+### CTC Invoice
+**Invoicing & Document Management**
+
+A multi-tenant invoicing platform under development, focused on accounting-document workflows, encrypted business information, permissions, and multilingual Hebrew/Arabic interfaces.
+
+[View Case Study](https://farah-portfolio-ten.vercel.app/projects/ctc-invoice)
+
+> Some featured projects are employer-owned systems. They are described at a high level without publishing proprietary source code, credentials, or confidential information.
+
+---
+
+## Technology Stack
+
+| Category | Technologies |
+|---|---|
+| Framework | Next.js 16 |
+| Frontend | React 19, TypeScript |
+| Styling | Tailwind CSS 4 |
+| Icons | Lucide React, React Icons |
+| Containerization | Docker |
+| Continuous Integration | GitHub Actions |
+| Hosting | Vercel |
+| Version Control | Git and GitHub |
+
+## Features
+
+- Responsive desktop and mobile layouts
+- Black & Gold design system
+- Reusable React components
+- Dynamic project-detail routes
+- Engineering case studies
+- Technology badges
+- System architecture diagrams
+- Accessible navigation controls
+- Custom FK favicon
+- SEO metadata
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── projects/[slug]/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── home/
+│   ├── layout/
+│   └── projects/
+├── data/
+└── types/
+
+.github/
+└── workflows/
+    └── ci.yml
+
+Dockerfile
+.dockerignore
+next.config.ts
+```
+
+The application separates routing, presentation components, project data, and TypeScript types.
+
+## Running Locally
+
+### Requirements
+
+- Node.js 22
+- npm
+- Git
+
+Clone the repository:
+
+```bash
+git clone https://github.com/farahkh99/farah-portfolio.git
+cd farah-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm ci
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint -- --max-warnings=0
+npx tsc --noEmit
+npm run build
+npm run start
+```
 
-## Learn More
+## Running with Docker
 
-To learn more about Next.js, take a look at the following resources:
+The repository includes a multi-stage Dockerfile using Next.js standalone output.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Build the image:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker build -t farah-portfolio:local .
+```
 
-## Deploy on Vercel
+Start the container:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+docker run --rm -p 3001:3000 --name farah-portfolio-test farah-portfolio:local
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open http://localhost:3001.
+
+Stop the container using Ctrl+C.
+
+## CI/CD
+
+GitHub Actions runs automated validation for Pull Requests targeting `develop` and `main`, and pushes to those branches.
+
+The CI pipeline:
+
+1. Checks out the repository.
+2. Sets up Node.js 22.
+3. Installs dependencies with `npm ci`.
+4. Runs ESLint.
+5. Validates TypeScript.
+6. Builds the Next.js application.
+
+Vercel handles automatic deployment of the production branch.
+
+### Branching Workflow
+
+```text
+feature/*
+    |
+    v
+  develop
+    |
+    | Pull Request + CI
+    v
+   main
+    |
+    v
+  Vercel
+```
+
+## Contact
+
+**Farah Khoury**
+
+- [Portfolio](https://farah-portfolio-ten.vercel.app/)
+- [LinkedIn](https://www.linkedin.com/in/farah-khoury-473a3920a)
+- [Email](mailto:farah.khoury11@gmail.com)
+
+---
+
+© Farah Khoury. All rights reserved.
