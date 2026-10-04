@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
+/* ---------------------------------
+   Portfolio Color System
+   Theme: Black & Gold
+---------------------------------- */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #f5f5f5;
+
+  --surface: #111111;
+  --surface-hover: #1a1a1a;
+
+  --accent: #d4af37;
+  --accent-hover: #e6c766;
+  --accent-strong: #b8901f;
+
+  --muted: #a1a1aa;
+  --border-color: rgba(212, 175, 55, 0.18);
 }
+
+/* ---------------------------------
+   Tailwind v4 Theme
+---------------------------------- */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-muted: var(--muted);
+
+  /* Remap your current utility colors
+     so existing components still match */
+
+  --color-slate-950: #050505;
+  --color-slate-900: #0b0b0b;
+  --color-slate-800: #111111;
+  --color-slate-700: #1f1f1f;
+  --color-slate-600: #2a2a2a;
+  --color-slate-500: #71717a;
+  --color-slate-400: #a1a1aa;
+  --color-slate-300: #d4d4d8;
+  --color-slate-200: #e4e4e7;
+  --color-slate-100: #f5f5f5;
+
+  /* Gold accent mapped to teal classes
+     so your current code keeps working */
+  --color-teal-300: #f3dc8a;
+  --color-teal-400: #d4af37;
+  --color-teal-500: #c89b2c;
+  --color-teal-600: #b8901f;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ---------------------------------
+   Global Styles
+---------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* ---------------------------------
+   Selection
+---------------------------------- */
+
+::selection {
+  background: rgba(212, 175, 55, 0.28);
+  color: #ffffff;
+}
+
+/* ---------------------------------
+   Ambient Background Animation
+---------------------------------- */
+
+@keyframes float-glow {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(80px, 60px, 0);
+  }
+}
+
+.ambient-orb {
+  animation: float-glow 12s ease-in-out infinite alternate;
+}
+
+.ambient-orb-slow {
+  animation-duration: 18s;
+  animation-direction: alternate-reverse;
+}
+
+/* ---------------------------------
+   Accessibility
+---------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ambient-orb {
+    animation: none;
+  }
 }
