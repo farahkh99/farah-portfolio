@@ -4,6 +4,7 @@ import { projects } from "@/data/projects";
 import ArchitectureFlow from "@/components/projects/ArchitectureFlow";
 import TechnologyBadge from "@/components/projects/TechnologyBadge";
 import type { Metadata } from "next";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -23,16 +24,14 @@ export async function generateMetadata({
 }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  const project = projects.find(
-    (item) => item.id === slug
-  );
+  const project = projects.find((item) => item.id === slug);
 
   if (!project) {
     notFound();
   }
 
   return {
-    title: `${project.title} | Farah Khoury`,
+    title: project.title,
     description: project.description,
   };
 }
@@ -48,6 +47,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <main className="min-h-screen bg-slate-950 px-6 py-24 text-slate-100">
+      <AnimatedBackground />
       <div className="mx-auto max-w-4xl">
         <Link
           href="/#work"
