@@ -3,6 +3,8 @@ import { projects } from "@/data/projects";
 import ProjectCard from "@/components/projects/ProjectCard";
 import TechnologyBadge from "@/components/projects/TechnologyBadge";
 import ContactSection from "@/components/home/ContactSection";
+import HeroSection from "@/components/home/HeroSection";
+import AboutSection from "@/components/home/AboutSection";
 
 const experiences = [
   {
@@ -146,89 +148,9 @@ export default function Home() {
 
       <main className="mx-auto max-w-6xl px-6">
         {/* Hero */}
-        <section
-          id="home"
-          className="flex min-h-[650px] scroll-mt-24 flex-col justify-center py-24"
-        >
-          <h1 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl">
-            Hi, I&apos;m <span className="text-teal-400">Farah Khoury.</span>
-          </h1>
-
-          <p className="mt-4 text-xl font-medium tracking-wide text-slate-200 sm:text-2xl">
-            Software Engineer
-          </p>
-
-          <p className="mt-8 max-w-3xl text-xl font-medium leading-relaxed text-slate-200">
-            I build reliable software that solves real-world business problems.
-          </p>
-
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-            Full-Stack Software Engineer With 3+ years of professional
-            experience, I develop production business applications, backend
-            services, and complex integrations using C#, PHP, JavaScript, and
-            SQL. I also build full-stack projects with React, Next.js,
-            TypeScript, and Node.js.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#work"
-              className="rounded-xl bg-teal-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-teal-300"
-            >
-              Explore My Work
-            </a>
-          </div>
-
-          <div className="mt-20 grid max-w-xl grid-cols-3 gap-5 border-t border-white/10 pt-8">
-            <div>
-              <p className="text-3xl font-bold">3+</p>
-              <p className="mt-2 text-sm text-slate-400">Years Experience</p>
-            </div>
-
-            <div>
-              <p className="text-3xl font-bold">10+</p>
-              <p className="mt-2 text-sm text-slate-400">Production Systems</p>
-            </div>
-
-            <div>
-              <p className="text-3xl font-bold">7</p>
-              <p className="mt-2 text-sm text-slate-400">Students Mentored</p>
-            </div>
-          </div>
-        </section>
-
+        <HeroSection />
         {/* About */}
-        <section
-          id="about"
-          className="scroll-mt-24 border-t border-white/10 py-24"
-        >
-          <p className="text-sm font-semibold tracking-widest text-teal-400">
-            GET TO KNOW ME
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold">About Me</h2>
-
-          <div className="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-slate-400">
-            <p>
-              I&apos;m a software engineer experienced in developing,
-              integrating, and supporting production applications across desktop
-              and web environments.
-            </p>
-
-            <p>
-              My experience includes backend development, relational databases,
-              responsive multilingual interfaces, third-party integrations, and
-              complex business workflows.
-            </p>
-
-            <p>
-              I enjoy designing maintainable solutions, solving technical
-              problems, and mentoring developers. I&apos;m also expanding my
-              experience with TypeScript, React, Next.js, and cloud-native
-              development.
-            </p>
-          </div>
-        </section>
+        <AboutSection />
 
         {/* Experience */}
         <section
