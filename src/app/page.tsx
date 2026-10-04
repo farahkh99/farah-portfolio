@@ -6,114 +6,8 @@ import ContactSection from "@/components/home/ContactSection";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
 import ExperienceSection from "@/components/home/ExperienceSection";
-
-
-
-const skillGroups = [
-  {
-    title: "Programming Languages",
-    skills: [
-      "C#",
-      "PHP",
-      "Java",
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "SQL",
-    ],
-  },
-  {
-    title: "Frontend Development",
-    skills: [
-      "React",
-      "Next.js",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "Bootstrap",
-      "jQuery",
-      "AJAX",
-      "Responsive UI",
-      "RTL / LTR",
-    ],
-  },
-  {
-    title: "Backend & APIs",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "PHP OOP / MVC",
-      "REST APIs",
-      "Webhooks",
-      "Authentication",
-      "RBAC",
-      "Third-party Integrations",
-      "Google Libraries",
-    ],
-  },
-  {
-    title: "Databases & Data",
-    skills: [
-      "MySQL",
-      "MariaDB",
-      "MongoDB",
-      "Database Design",
-      "Migrations",
-      "Query Optimization",
-      "Data Integrity",
-    ],
-  },
-  {
-    title: "Systems & Cloud",
-    skills: [
-      "Linux",
-      "Unix",
-      "Windows",
-      "Microsoft Azure",
-      "Active Directory",
-      "Microsoft 365",
-      "VPS",
-      "Networking",
-      "VPNs",
-      "Firewalls",
-    ],
-  },
-  {
-    title: "Tools & Engineering",
-    skills: [
-      "Git",
-      "GitHub",
-      "Docker",
-      "Visual Studio",
-      "VS Code",
-      "C# WinForms",
-      "System Architecture",
-      "Testing",
-      "Code Review",
-      "Debugging",
-      "Deployment",
-      "Production Support",
-    ],
-  },
-];
-
-const education = [
-  {
-    degree: "B.Sc. in Computer Science",
-    institution: "Ramat Gan Academic College",
-    detail: "Evening Program · Starting Fall 2026",
-  },
-  {
-    degree: "Practical Software Engineering Diploma",
-    institution: "ORT Braude College",
-    detail: "Software Engineering",
-  },
-  {
-    degree: "Quality Assurance Certification",
-    institution: "Technion, Haifa",
-    detail: "Software Quality Assurance",
-  },
-];
+import SkillsSection from "@/components/home/SkillsSection";
+import EducationSection from "@/components/home/EducationSection";
 
 export default function Home() {
   return (
@@ -156,62 +50,10 @@ export default function Home() {
         </section>
 
         {/* Skills */}
-        <section
-          id="skills"
-          className="scroll-mt-24 border-t border-white/10 py-24"
-        >
-          <p className="text-sm font-semibold tracking-widest text-teal-400">
-            TECHNICAL EXPERTISE
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold">Skills & Technologies</h2>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {skillGroups.map((group) => (
-              <article
-                key={group.title}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-7"
-              >
-                <h3 className="mb-6 text-lg font-semibold">{group.title}</h3>
-
-                <div className="flex flex-wrap items-start gap-4">
-                  {group.skills.map((skill) => (
-                    <TechnologyBadge key={skill} name={skill} />
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+       <SkillsSection />
 
         {/* Education */}
-        <section
-          id="education"
-          className="scroll-mt-24 border-t border-white/10 py-24"
-        >
-          <p className="text-sm font-semibold tracking-widest text-teal-400">
-            ACADEMIC BACKGROUND
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold">
-            Education & Certifications
-          </h2>
-
-          <div className="mt-12 space-y-4">
-            {education.map((item) => (
-              <article
-                key={item.degree}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
-              >
-                <h3 className="text-xl font-semibold">{item.degree}</h3>
-
-                <p className="mt-2 text-teal-400">{item.institution}</p>
-
-                <p className="mt-2 text-sm text-slate-400">{item.detail}</p>
-              </article>
-            ))}
-          </div>
-        </section>
+      <EducationSection />
 
         {/* Contact */}
 
