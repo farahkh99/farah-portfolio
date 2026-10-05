@@ -2,23 +2,37 @@ export type ArchitectureIcon =
   | "device"
   | "server"
   | "database"
-  | "dashboard";
+  | "dashboard"
+  | "desktop"
+  | "api"
+  | "plug"
+  | "document";
 
 export interface ArchitectureStep {
   title: string;
   description: string;
   icon: ArchitectureIcon;
 }
+
+export interface ProjectCaseStudy {
+  problem: string;
+  implementation: string;
+  result: string;
+
+  challenges?: string[];
+  responsibilities?: string[];
+  impact?: string[];
+}
+
 export interface Project {
   id: string;
   title: string;
   category: string;
   description: string;
+
   technologies: string[];
-  caseStudy?: {
-  problem: string;
-  implementation: string;
-  result: string;
-};
-architecture?: ArchitectureStep[];
+
+  caseStudy?: ProjectCaseStudy;
+
+  architecture?: ArchitectureStep[];
 }

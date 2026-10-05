@@ -6,6 +6,10 @@ import {
   Server,
   Database,
   LayoutDashboard,
+  Monitor,
+  Braces,
+  Plug,
+  FileText,
   type LucideIcon,
 } from "lucide-react";
 
@@ -18,11 +22,18 @@ interface ArchitectureFlowProps {
   steps: ArchitectureStep[];
 }
 
-const architectureIcons: Record<ArchitectureIcon, LucideIcon> = {
+const architectureIcons: Record<
+  ArchitectureIcon,
+  LucideIcon
+> = {
   device: Fingerprint,
   server: Server,
   database: Database,
   dashboard: LayoutDashboard,
+  desktop: Monitor,
+  api: Braces,
+  plug: Plug,
+  document: FileText,
 };
 
 export default function ArchitectureFlow({
@@ -31,7 +42,7 @@ export default function ArchitectureFlow({
   return (
     <section className="mt-16 border-t border-white/10 pt-12">
       <div>
-        <p className="text-sm font-semibold uppercase tracking-widest text-teal-400">
+        <p className="text-sm font-semibold uppercase tracking-widest text-accent">
           Technical Overview
         </p>
 
@@ -54,17 +65,17 @@ export default function ArchitectureFlow({
       key={`${index}-${step.title}`}
       className="relative"
     >
-      <article className="group h-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-teal-400/40">
+      <article className="group h-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-accent/40">
         <div className="flex flex-col items-start gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-400/10">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
             <StepIcon
               aria-hidden="true"
-              className="h-6 w-6 text-teal-400"
+              className="h-6 w-6 text-accent"
             />
           </div>
 
           <div>
-            <p className="text-xs font-semibold tracking-widest text-teal-400">
+            <p className="text-xs font-semibold tracking-widest text-accent">
               STEP {String(index + 1).padStart(2, "0")}
             </p>
 
