@@ -2,7 +2,7 @@ export const education = [
   {
     degree: "B.Sc. in Computer Science",
     institution: "Ramat Gan Academic College",
-    detail: "Evening Program · Starting Fall 2026",
+    detail: "Evening Program · 2026 — Present",
   },
   {
     degree: "Practical Software Engineering Diploma",
