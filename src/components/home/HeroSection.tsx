@@ -6,10 +6,7 @@ export default function HeroSection() {
       className="flex min-h-[650px] scroll-mt-24 flex-col justify-center py-24"
     >
       <h1 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl">
-        Hi, I&apos;m{" "}
-        <span className="text-accent">
-          Farah Khoury.
-        </span>
+        <span className="text-accent">Farah Khoury</span>
       </h1>
 
       <p className="mt-4 text-xl font-medium tracking-wide text-slate-200 sm:text-2xl">
