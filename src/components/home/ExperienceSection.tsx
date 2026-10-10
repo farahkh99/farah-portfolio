@@ -39,7 +39,7 @@ export default function ExperienceSection() {
                   <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400">
                     {job.employmentNote}
                   </p>
-                )>
+                )}
               </div>
 
               <p className="text-sm text-slate-400">
