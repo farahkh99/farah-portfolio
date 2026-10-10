@@ -23,9 +23,9 @@ My background includes:
 - MySQL and database-driven systems
 - Authentication and role-based access control
 - Multilingual interfaces with RTL and LTR support
-- Production troubleshooting and technical leadership
+- Production troubleshooting and mentoring student developers
 
-I'm continuing to expand my experience with React, Next.js, TypeScript, Node.js, and modern deployment workflows.
+I started at CTC part-time while also working at Galil Software, then transitioned to full-time. I am pursuing a B.Sc. in Computer Science (2026–Present). React, Next.js, TypeScript, and Node.js are part of my hands-on project experience; my production work centers on PHP, C#, JavaScript, SQL, and integrations.
 
 ## Featured Engineering Projects
 
