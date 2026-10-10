@@ -31,7 +31,7 @@ export const projects: Project[] = [
         "Developed and maintained C#/.NET POS functionality together with PHP and MySQL services. Integrated payment workflows, PAX terminals, receipt and kitchen printers, inventory operations, X/Z reporting, transaction history, WhatsApp document delivery, and station-specific configuration.",
 
       result:
-        "The system provides a unified production environment for day-to-day retail operations, connecting checkout workflows with payment hardware, backend services, reporting, inventory, printing, and customer document delivery.",
+        "My contributions connected day-to-day POS workflows with payment hardware, printing, reporting, inventory, and digital receipt delivery. Performance and scale metrics are not published without verified data.",
 
       challenges: [
         "Maintaining transaction consistency across payments, refunds, cancellations, and reports",
@@ -202,7 +202,7 @@ export const projects: Project[] = [
         "Used Python scripts running on a VPS to retrieve attendance records from physical devices and transfer the records into MySQL, where the PHP application could process and display employee attendance, shifts, requests, approvals, and reports.",
 
       result:
-        "Attendance-device data became available through customer dashboards, connecting physical attendance hardware with server-side automation, database storage, and workforce-management functionality.",
+        "Python scripts on a VPS connected physical attendance devices with MySQL-backed workforce dashboards and reporting. Device counts and synchronization metrics are not presented without verified measurements.",
 
       challenges: [
         "Communicating with physical biometric attendance devices",
