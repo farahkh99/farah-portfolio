@@ -34,6 +34,12 @@ export default function ExperienceSection() {
                 <p className="mt-1 text-sm text-slate-500">
                   {job.location}
                 </p>
+
+                {"employmentNote" in job && job.employmentNote && (
+                  <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400">
+                    {job.employmentNote}
+                  </p>
+                )>
               </div>
 
               <p className="text-sm text-slate-400">
