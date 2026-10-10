@@ -17,11 +17,10 @@ export default function ProjectsSection() {
       </h2>
 
       <p className="mt-5 max-w-2xl leading-7 text-slate-400">
-        A selection of my professional engineering
-        experience and personal development work.
-        Employer-owned projects are described at a
-        high level without publishing proprietary
-        source code or internal materials.
+        Engineering case studies covering production business
+        systems, backend development, device integrations,
+        and database-driven applications. Employer-owned
+        source code and customer details remain private.
       </p>
 
       <div className="mt-12 grid gap-6 md:auto-rows-fr md:grid-cols-2">

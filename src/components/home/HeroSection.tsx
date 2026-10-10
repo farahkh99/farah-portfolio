@@ -10,21 +10,20 @@ export default function HeroSection() {
       </h1>
 
       <p className="mt-4 text-xl font-medium tracking-wide text-slate-200 sm:text-2xl">
-        Software Engineer
+        Full-Stack Software Engineer
       </p>
 
       <p className="mt-8 max-w-3xl text-xl font-medium leading-relaxed text-slate-200">
-        I build reliable software that solves real-world
-        business problems.
+        I build and support software used in everyday business operations.
       </p>
 
       <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
-        Full-Stack Software Engineer with 3+ years of
-        professional experience. I develop production
-        business applications, backend services, and
-        complex integrations using C#, PHP, JavaScript,
-        and SQL. I also build full-stack projects with
-        React, Next.js, TypeScript, and Node.js.
+        Over 3 years of professional experience developing
+        POS, workforce-management, inventory, and other
+        production systems with PHP, C#, JavaScript,
+        and MySQL. I build APIs, integrate physical devices,
+        and solve production issues. My recent projects
+        also use React, Next.js, TypeScript, and Node.js.
       </p>
 
       <div className="mt-10 flex flex-wrap gap-4">

@@ -1,16 +1,17 @@
-
 export const experiences = [
   {
-    role: "Full-Stack Software Engineer / Technical Lead",
+    role: "Full-Stack Software Engineer",
     company: "CTC",
     location: "Yarka, Israel",
     period: "2023 — Present",
+    employmentNote:
+      "Part-time while also employed at Galil Software; subsequently transitioned to full-time.",
     responsibilities: [
-      "Developed and maintained business applications across POS, CRM, inventory, workforce management, and digital workflows.",
-      "Built backend services, database-driven functionality, REST APIs, authentication, and role-based access control.",
-      "Developed multilingual interfaces supporting Arabic, Hebrew, and English with RTL and LTR layouts.",
-      "Worked on external integrations, performance improvements, and production troubleshooting.",
-      "Mentored seven student developers through implementation, code reviews, testing, and deployment.",
+      "Developed and maintained 10+ production business systems for POS, CRM, inventory, workforce management, and digital-document workflows.",
+      "Built PHP/MySQL backend services, REST APIs, authentication, role-based permissions, and database-driven reports.",
+      "Developed C#/.NET POS payment, refund, printing, and reporting functionality, including work to avoid redundant database reads before printing.",
+      "Integrated payment terminals, printers, WhatsApp delivery, and attendance devices; used Python scripts on a VPS to transfer attendance records to MySQL dashboards.",
+      "Designed relational schemas and data-repair queries, built Hebrew/Arabic/English RTL/LTR interfaces, and mentored seven student developers.",
     ],
   },
   {
